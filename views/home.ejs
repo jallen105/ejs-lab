@@ -3,19 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+        background-color: #5688C7;
+        color: #470024;
+    }
+    a {
+        color: #470024;
+    }
+    a:visited {
+        color: #5B1865;
+    }
+    a:hover {
+        color: #C75146;
+    }
+    h1 {
+        margin: 0 auto;
+        justify-self: center;
+    }
+    .container, .menu-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    nav {
+        justify-self: center;
+        margin-bottom: 10px;
+    }
+  </style>
   <title><%= name %></title>
 </head>
 <body>
     <%- include('./partials/nav') %>
   <h1>Home Page</h1>
-  <p><%= name %></p>
-  <p>Address: <%= address %></p>
-  <p>Phone: <%= phone %></p>
+  <div class="container">
+    <h2><%= name %></h2>
+    <p>Address: <%= address %></p>
+    <p>Phone: <%= phone %></p>
 
-  <% if (isOpen) {%>
-    <p>Yes we are open!</p>
-  <% } else { %>
-    <p>Sorry, we are closed.</p>  
-  <% } %>
+    <% if (isOpen) {%>
+        <p>Yes we are open!</p>
+    <% } else { %>
+        <p>Sorry, we are closed.</p>  
+    <% } %>
+  </div>
+
 </body>
 </html>

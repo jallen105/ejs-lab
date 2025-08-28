@@ -3,6 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+        background-color: #5688C7;
+        color: #470024;
+    }
+    a {
+        color: #470024;
+    }
+    a:visited {
+        color: #5B1865;
+    }
+    a:hover {
+        color: #C75146;
+    }
+    h1, h2 {
+        margin: 0 auto;
+        justify-self: center;
+    }
+
+    h2 {
+        border-bottom: #251101 solid 2px;
+    }
+    .container, .menu-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    nav {
+        justify-self: center;
+        margin-bottom: 10px;
+    }
+  </style>
   <title>Menu</title>
 </head>
 <body>
@@ -14,7 +47,7 @@
   <% menu.forEach((item) => { %>
     <% if (item.category === 'mains') {%>
         <div class="menu-card">
-            <p><%= item.name %> <%= item.rating === 5 ? "⭐" : '' %></p>
+            <h3><%= item.name %> <%= item.rating === 5 ? "⭐" : '' %></h3>
             <p>price: <%= item.price %></p>
             <p>rating: <%= item.rating %></p>
             <p><%= item.details %></p>
@@ -29,7 +62,7 @@
   <% menu.forEach((item) => { %>
     <% if (item.category === 'sides') {%>
         <div class="menu-card">
-            <p><%= item.name %> <%= item.rating === 5 ? "⭐" : '' %></p>
+            <h3><%= item.name %> <%= item.rating === 5 ? "⭐" : '' %></h3>
             <p>price: <%= item.price %></p>
             <p>rating: <%= item.rating %></p>
             <p><%= item.details %></p>
@@ -45,7 +78,7 @@
   <% menu.forEach((item) => { %>
     <% if (item.category === 'desserts') {%>
         <div class="menu-card">
-            <p><%= item.name %> <%= item.rating === 5 ? "⭐" : '' %></p>
+            <h3><%= item.name %> <%= item.rating === 5 ? "⭐" : '' %></h3>
             <p>price: <%= item.price %></p>
             <p>rating: <%= item.rating %></p>
             <p><%= item.details %></p>
