@@ -41,12 +41,7 @@
     <h2><%= name %></h2>
     <p>Address: <%= address %></p>
     <p>Phone: <%= phone %></p>
-
-    <% if (isOpen) {%>
-        <p>Yes we are open!</p>
-    <% } else { %>
-        <p>Sorry, we are closed.</p>  
-    <% } %>
+    <p><%= isOpen ? 'Yes, we are open!' : 'Sorry, we are closed.' %></p>
   </div>
 
 </body>
