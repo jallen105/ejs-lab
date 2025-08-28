@@ -6,11 +6,12 @@
   <title><%= name %></title>
 </head>
 <body>
+    <%- include('./partials/nav') %>
   <h1>Home Page</h1>
   <p><%= name %></p>
   <p>Address: <%= address %></p>
   <p>Phone: <%= phone %></p>
-  
+
   <% if (isOpen) {%>
     <p>Yes we are open!</p>
   <% } else { %>
